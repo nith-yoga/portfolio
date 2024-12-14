@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004C54;
+    color: #A5ACAF;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Full-page section setup */
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    scroll-snap-align: start;
+}
+
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #A5ACAF;
+    padding: 10px 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header h3 {
+    font-size: 18px;
+}
+
+.nav-bar {
+    display: flex;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #A5ACAF;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    color: #ACC0C6;
+}
+
+/* Home Page */
+#home-page {
+    background-color: #004C54;
+    color: #ACC0C6;
+    flex-direction: column;
+    text-align: center;
+}
+
+#hello {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#intro {
+    font-size: 30px;
+}
+
+/* About Page */
+#about-page {
+    background-color: #000000;
+    color: #A5ACAF;
+    display: flex; /* Set up a flex container */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Vertically center-align items */
+    padding: 20px;
+    text-align: left;
+}
+
+#self-img {
+    flex: 1; /* Let the image take up one part of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Add some spacing to the right of the image */
+}
+
+#self-img img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Optional: Add a shadow effect */
+}
+
+.about-text {
+    flex: 2; /* Let the text take up two parts of the space */
+    max-width: 60%; /* Limit the text width */
+    margin-left: 20px; /* Add some spacing to the left of the text */
+}
+
+
+/* Projects Page */
+#projects-page {
+    background-color: #565A5C;
+    color: #ACC0C6;
+    flex-direction: column;
+}
+
+.projects {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#project-1 {
+    text-align: left;
+}
+
+#project-2 {
+    text-align: right;
+}
+
+#project-3 {
+    text-align: left;
+}
+
+/* Contact Page Grid */
+#contact-page {
+    background-color: #004C54;
+    color: #ACC0C6;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact-page h2 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-grid div {
+    background-color: #565A5C;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-grid img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-grid h4 {
+    margin: 10px 0;
+    color: #ACC0C6;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contact-grid a {
+    text-decoration: none;
+    color: #ACC0C6;
+    font-weight: bold;
+}
+
+.contact-grid a:hover {
+    color: #A5ACAF;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .social-links,
+    .personal-links {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
